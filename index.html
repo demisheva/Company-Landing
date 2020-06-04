@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/17170847fa.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <title>big company landing (css-grid)</title>
 </head>
@@ -60,12 +61,33 @@
             doloribus vitae alias earum.</p>
     </main>
 
-    <footer class="footer-wrapper">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati vitae tenetur commodi deserunt
-            consequuntur minima aspernatur deleniti placeat? Ea architecto magni veniam adipisci modi esse
-            veritatis
-            doloribus vitae alias earum.</p>
-    </footer>
+    <div class="footer-wrapper grid-container">
+        <footer class="footer">
+            <div class="footer-logo">
+                <a href="#" class="logo"> <img src="images/logo.png" alt="Logo"> </a>
+            </div>
+            <div class="footer-contacts">
+                <h3>CONTACT US</h3>
+                <a href="tel:+00000000000"><i class='fas fa-mobile-alt'></i> +00 000 00 00 00</a>
+                <a class="mail" href="mailto:mail@gmail.com"><i class="fas fa-envelope"></i> mail@gmail.com</a>
+            </div>
+            <div class="footer-social-links">
+                <h3>FOLLOW US</h3>
+                <a href="#facebook" target="_blank">
+                    <img src="images/facebook.png" alt="facebook">
+                </a>
+                <a href="#instagram" target="_blank">
+                    <img src="images/instagram.png" alt="instagram">
+                </a>
+                <a href="#twitter" target="_blank">
+                    <img src="images/twitter.png" alt="twitter">
+                </a>
+            </div>
+        </footer>
+    </div>
+    <div class="copyright">
+        <p> &copy;2020 Infinity design by Demisheva Anna</p>
+    </div>
 </body>
 
 </html>
