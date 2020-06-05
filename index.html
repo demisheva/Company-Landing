@@ -3,22 +3,22 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/17170847fa.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
-    <title>big company landing (css-grid)</title>
+    <title>company landing (css-grid)</title>
 </head>
 
 <body>
     <!-- BUNNER -->
-    <section class="bunner-wrapper grid-container">
+    <section class="grid-container bunner-wrapper ">
         <div class="bunner">
             <p class="bunner-slogan">See the world through our product</p>
             <p class="bunner-discription">Get The Most Converstion Rate Easily</p>
             <form action="" class="subscribe-form">
-                <input type="text" id="name" name="name" placeholder="Your Name">
-                <input type="email" id="email" name="email" placeholder="Email">
+                <input type="text" id="id" id="id" placeholder="Your id">
+                <input type="email" id="email" id="email" placeholder="Email">
                 <input class="green_btn" type="submit" value="Subscribe >>">
             </form>
             <p class="subscribe_info">* We don’t share your personal
@@ -28,17 +28,17 @@
     </section>
 
     <!-- HEADER -->
-    <div class="header-wrapper grid-container">
+    <div class="grid-container header-wrapper ">
         <header class="header">
             <a href="#" class="logo"> <img src="images/logo.png" alt="Logo"> </a>
             <nav class="menu">
                 <ul>
-                    <li><a href="">SERVICE</a></li>
-                    <li><a href="">ABOUT</a></li>
-                    <li><a href="">PORTFOLIO</a></li>
-                    <li><a href="">TEAM</a></li>
-                    <li><a href="">PRICING</a></li>
-                    <li><a href="">TESTIMONIAL</a></li>
+                    <li><a href="#service">SERVICE</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#portfolio">PORTFOLIO</a></li>
+                    <li><a href="#team">TEAM</a></li>
+                    <li><a href="#pricing">PRICING</a></li>
+                    <li><a href="#testimonial">TESTIMONIAL</a></li>
                 </ul>
             </nav>
             <div class="social-links">
@@ -54,12 +54,90 @@
             </div>
         </header>
     </div>
+
     <!-- MAIN CONTENT -->
     <main class="content-wrapper">
 
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati vitae tenetur commodi deserunt
-            consequuntur minima aspernatur deleniti placeat? Ea architecto magni veniam adipisci modi esse veritatis
-            doloribus vitae alias earum.</p>
+        <!-- What We Do -->
+        <section class="grid-container  what-we-do-wrapper">
+            <div class="what-we-do">
+                <h2>What we <span class="green_txt">do</span></h2>
+                <div class="grid-3colums-in-row what-we-do-dicription">
+                    <div>
+                        <img src="images/exclusive-design.png" alt="">
+                        <h4>EXCLUSIVE DESIGNS</h4>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde magnam blanditiis nisi ipsam
+                            nihil perferendis hic, inventore voluptates.
+                            Unde libero repellat autem dicta quae!
+                        <p>
+                    </div>
+                    <div>
+                        <img src="images/best-quality-wool.png" alt="">
+                        <h4>BEST QUALITY WOOL</h4>
+                        <p>Lorem ipsum
+                            nihil perferendis hic, inventore voluptates, perspiciatis maiores ex enim quibusdam beatae.
+                            Unde libero repellat autem dicta quae!
+                        <p>
+                    </div>
+                    <div>
+                        <img src="images/uniqu-combination.png" alt="">
+                        <h4>UNIQUE COMBINATIONS</h4>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde magnam blanditiis nisi ipsam
+                            nihil perferendis hic, inventore voluptates, perspiciatis maiores ex enim quibusdam beatae.
+                            Unde libero repellat autem dicta quae!
+                        <p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Service  -->
+        <section class="grid-container service-wrapper" id="service">
+            <div class="service">
+                <h2>Services We <span class="green_txt">Provide</span></h2>
+
+            </div>
+        </section>
+
+        <!-- About -->
+        <section class="grid-container about-wrapper " id="about">
+            <div class="about">
+                <h2>What Our <span class="green_txt">Features</span></h2>
+
+            </div>
+        </section>
+
+        <!-- Portfolio -->
+        <section class="grid-container  portfolio-wrapper" id="portfolio">
+            <div class="portfolio">
+                <h2>Our <span class="green_txt">Works</span></h2>
+
+            </div>
+        </section>
+
+        <!-- Team -->
+        <section class="grid-container team-wrapper" id="team">
+            <div class="team">
+                <h2>Our <span class="green_txt">Team</span></h2>
+
+            </div>
+        </section>
+
+        <!-- Pricing -->
+        <section class="grid-container  pricing-wrapper" id="pricing">
+            <div class="pricing">
+                <h2>Select your <span class="green_txt">best deal</span></h2>
+
+            </div>
+        </section>
+
+        <!-- Testimonial -->
+        <section class="grid-container  testimonial-wrapper" id="testimonial">
+            <div class="testimonial">
+                <h2>What <span class="green_txt">Our Customers</span> say</h2>
+            </div>
+        </section>
+
     </main>
 
     <!-- FOOTER -->
