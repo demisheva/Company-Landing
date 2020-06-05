@@ -4,9 +4,13 @@ body{
     font-size: 16px;
     font-family: 'Ubuntu', sans-serif;
 }
+p{
+    margin: 0;
+}
 h1{
     font-size: 3.5rem;
-    line-height: 4.187‬5rem;
+    line-height: 4.2rem;
+    padding: 1rem 0;
 }
 input:focus {
     outline: none;
@@ -65,11 +69,13 @@ input[type=submit]:hover, input[type=submit]:active{
 }
 .bunner-slogan{
     font-size: 3.5rem;
-    line-height: 4.187‬5rem;
+    line-height: 4.2rem;
+    padding: 1rem 0;
 }
 .bunner-discription{
     font-size: 1.5rem;
-    line-height: 4.187‬5rem;
+    line-height: 4.2rem;
+    padding: 1rem 0;
 }
 .subscribe_info {
     line-height: 27px;
@@ -106,9 +112,13 @@ input[type=submit]:hover, input[type=submit]:active{
     list-style: none;
     margin: 0;
     padding: 0;
+    text-align: center;
 }
-.menu ul li a{
+.menu a{
     color: #a69999; 
+}
+.menu a:hover, .menu a:active{
+    color: #1abc9c;
 }
 .social-links{
     display: grid;
@@ -119,6 +129,7 @@ input[type=submit]:hover, input[type=submit]:active{
 .social-links img{
     display: block;
     margin: 0px 10px;
+    height: 1rem;
 }
 
 /* --- --- */
@@ -129,39 +140,55 @@ input[type=submit]:hover, input[type=submit]:active{
 
 
 /* --- FOOTER--- */
-.footer-wrapper {
-    grid-column: 1 / 4;
-    background-color: #000000;
-}
 .footer{
+    grid-column: 1 / 4;
+}
+.footer-contac-us{
+    background-color: #f1f1ef;
     grid-column: 2/3;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    color: #fff;
-}
-.footer-logo{
-    align-self: center;
-    text-align: center;
-}
-.footer-contacts a{
-    display: block;
-    color: #fff;
-    padding-top: 10px;
-}
-.footer-contacts a:hover{
-    color: #1abc9c;
+    grid-template-columns: repeat(3,1fr); 
+    align-items: center;
+    text-align: center; 
+    padding: 1rem 0;
 }
 
-.footer-social-links a{
-    margin-right: 10px;
+.phone i, .work-time i, .mail i{
+    font-size: 3rem;
+}
+.phone p, .work-time p, .mail p{
+    padding: 0.5rem;
+    font-weight: bold;
+}
+.work-time{
+    border-left: 1px solid #a69999;
+    border-right: 1px solid #a69999;
+}
+
+.footer-copyright-wrapper{
+    background-color: #000;
+    color:#a69999;
 }
 .copyright{
-    color: #9E9E9E;
-    background-color: #000000;
-}
-.copyright p{
-    align-self: center;
+    grid-column: 2/3;
+    align-items: center;
     text-align: center;
-    margin: 0;
     padding: 50px 0 10px;
+}
+.footer-logo-social-wrapper{
+    background-color: #000;
+}
+.footer-logo-social{
+    grid-column: 2/3;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-self: center;
+    padding: 2rem 0;
+}
+.footer-social-links{
+    text-align: right;
+}
+.footer-social-links a img{
+    padding-left: 1rem;
+    height: 1.5rem;
 }
