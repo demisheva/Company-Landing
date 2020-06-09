@@ -16,14 +16,19 @@ h2{
     text-align: center;
     padding: 2rem;
 }
-h4{
+h3{
     font-size: 1.7rem;
+    color: #4c4c4c;
+    padding: 1rem 0;
+    font-weight: 700;
+}
+h4{
+    font-size: 1.5rem;
     padding: 1rem 0;
     color: #4c4c4c;
     color: #4c4c4c;
     font-weight: 400;
 }
-
 input:focus {
     outline: none;
 }
@@ -69,12 +74,14 @@ input[type=submit]:hover, input[type=submit]:active{
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows:max-content;
     column-gap: 2rem;
+    row-gap: 2rem;
 }
 .grid-3colums-in-row{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows:max-content;
     column-gap: 2rem;
+    row-gap: 2em;
 }
 
 /* --- BUNNER --- */
@@ -159,28 +166,94 @@ input[type=submit]:hover, input[type=submit]:active{
 }
 
 /* ---CONTENT --- */
-  .content-wrapper {
+.content-wrapper {
     grid-column: 1 / 4;
     padding: 3rem 0;
     align-self: center;
-  }
-  .what-we-do-wrapper{
+}
+.wrapper{
     padding: 3rem 0;
-    border-bottom: 1px solid #a69999;
-  }
-  .what-we-do{
+}
+.wrapper:nth-child(even){
+    background-color: #f7f7f7;
+}
+.what-we-do,.service, .about, .portfolio, .team, .pricing, .testimonial{
     grid-column: 2/3;
     text-align: center;
-  }
-  .what-we-do-dicription{
+}
+.what-we-do-dicription{
     padding: 2rem 0;
-  }
-  .what-we-do-dicription img{
-      max-width: 3rem;
-  }
-  .what-we-do-dicription p{
-        color: #939598;
-  }
+}
+.what-we-do-dicription img{
+    max-width: 3rem;
+}
+.what-we-do-dicription p{
+   color: #939598;
+}
+.block-service{
+    border: 1px solid #a69999;
+    padding: 1rem;
+    background-color: #ffffff;
+}
+.block-service ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.block-service ul li{
+    box-shadow: 1px 1.732px 1.5px rgba(0,0,0,0.1);
+    margin-bottom: 5px;
+    padding: 0.5rem;
+    color: #000000;
+}
+.block-service ul li:hover{
+    cursor: default;
+    background-color: #f1f1f1;
+}
+.block-service img{
+    max-height: 150px;
+}
+.about-2colums{
+    display: grid;
+    grid-template-columns: 6fr 4fr;
+    grid-template-rows:max-content;
+    column-gap: 2rem;
+    row-gap: 2rem;
+}
+.video iframe{
+    width:100%;
+    min-height:300px;
+}
+.tabs {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.tabs li{
+    display: inline-block;
+    background-color:#1abc9c;
+    margin: 0.5rem;
+    padding: 0.5rem 1rem;
+    color: #fff;
+}
+.tabs li.active, .tabs li:hover{
+    background-color: #000;
+    cursor: pointer;
+}
+.portfolio{
+    margin-bottom: 3em;
+}
+.portfolio-gallerys{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    align-self: center;
+    justify-self: center;
+}
+.portfolio-gallerys img{
+display: block;
+max-width: 100%;
+}
+
 
 
 /* --- FOOTER--- */
