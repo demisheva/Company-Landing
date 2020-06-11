@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zxx">
 
 <head>
     <meta charset="UTF-8">
-    <meta id="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/17170847fa.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" media="screen and (max-width: 900px)" href="middlescreen.css">
+    <link rel="stylesheet" media="screen and (max-width: 600px)" href="smallscreen.css">
     <title>company landing (css-grid)</title>
 </head>
 
@@ -14,9 +16,9 @@
     <!-- BUNNER -->
     <section class="grid-container bunner-wrapper ">
         <div class="bunner">
-            <p class="bunner-slogan">See the world through our product</p>
+            <h1>See the world through our product</h1>
             <p class="bunner-discription">Get The Most Converstion Rate Easily</p>
-            <form action="" class="subscribe-form">
+            <form class="subscribe-form">
                 <input type="text" placeholder="Your Name">
                 <input type="email" placeholder="Your Email">
                 <input class="green_btn" type="submit" value="Subscribe >>">
@@ -139,8 +141,7 @@
                 <div class="about-2colums">
                     <div class="video">
                         <iframe src="https://www.youtube.com/embed/POX-RofpKtM" frameborder="0"
-                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
                     </div>
                     <div>
                         <h3>Take a sneak peek at our
@@ -158,10 +159,10 @@
                 <div class="portfolio">
                     <h2>Our <span class="green_txt">Works</span></h2>
                     <ul class="tabs">
-                        <li class="active" data="all">All</li>
-                        <li data="design">Design</li>
-                        <li data="development">Developnent</li>
-                        <li data="uncategorized">Uncategorized</li>
+                        <li class="active" data-gallary="all">All</li>
+                        <li data-gallary="design">Design</li>
+                        <li data-gallary="development">Developnent</li>
+                        <li data-gallary="uncategorized">Uncategorized</li>
                     </ul>
                 </div>
             </div>
@@ -331,6 +332,7 @@
 
                     </figure>
                 </div>
+            </div>
         </section>
 
         <!-- Team -->
@@ -340,17 +342,17 @@
                 <div class="grid-3colums-in-row ">
                     <div class="team-member">
                         <img src="images/team-1.jpg" alt="">
-                        <h4>Name Surmane</h4>
+                        <h4>Name Surname</h4>
                         <p>People Who cares</p>
                     </div>
                     <div class="team-member">
                         <img src="images/team-3.jpg" alt="">
-                        <h4>Name Surmane</h4>
+                        <h4>Name Surname</h4>
                         <p>People Who cares</p>
                     </div>
                     <div class="team-member">
                         <img src="images/team-2.jpg" alt="">
-                        <h4>Name Surmane</h4>
+                        <h4>Name Surname</h4>
                         <p>People Who cares</p>
                     </div>
                 </div>
@@ -459,7 +461,7 @@
     <!-- FOOTER -->
     <footer class="footer">
 
-        <div class="grid-container footer-contac-us-wrapper">
+        <div class="grid-container footer-contac-us-wrapper ">
             <div class="footer-contac-us">
                 <div class="phone">
                     <p><i class='fas fa-mobile-alt'></i></p>

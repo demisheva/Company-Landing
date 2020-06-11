@@ -1,0 +1,25 @@
+@media screen and (max-width: 600px){
+    .grid-3colums-in-row, .grid-2colums-in-row,.about-2colums {
+        grid-template-columns: 1fr;
+    }
+    .bunner-discription {
+        line-height: 1.5rem;
+    }
+    input{
+        margin: 0 ;
+    }
+    .menu {
+        margin: 0;
+    }
+    .menu ul{
+        grid-template-columns: 1fr;
+        row-gap: 2vh;
+        text-align: justify;
+        padding: 2vh;
+        background: #f7f7f7;
+    }
+    .tabs {
+        grid-template-columns: repeat(2,1fr);
+        row-gap: 2vh;
+    }
+}

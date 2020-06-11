@@ -2,32 +2,30 @@
     margin: 0;
 }
 body{
-    margin: 0;
     padding: 0;
     font-size: 16px;
     font-family: 'Ubuntu', sans-serif;
 }
-
+h1, h2, h3, h4,h5,h6{
+    font-weight: 700;
+    text-align: center;
+    padding: 3vh 0;
+    color: #4c4c4c; 
+}
+h1{
+    font-size: 4rem;
+    color: #fff; 
+}
 h2{
     font-size: 3.8rem;
     line-height: 4.2rem;
-    color: #4c4c4c;
-    font-weight: 300;
-    text-align: center;
-    padding: 2rem;
 }
 h3{
     font-size: 1.7rem;
-    color: #4c4c4c;
-    padding: 1rem 0;
-    font-weight: 700;
 }
 h4{
     font-size: 1.5rem;
-    padding: 1rem 0;
-    color: #4c4c4c;
-    color: #4c4c4c;
-    font-weight: 400;
+
 }
 input:focus {
     outline: none;
@@ -39,18 +37,10 @@ a{
 a:hover, a:active{
     color: #000;
 }
-.green_txt{
-    color: #1abc9c;
-}
-.green_btn{
-    border: 1px solid #1abc9c;
-    background-color: #1abc9c;
-    color: #fff;
-}
 input{
     font-size: 1.125rem;
-    padding: 10px;
-    margin-left: -4px;
+    align-self: center;
+    padding: 1vh;
     text-align: center;
     border: 1px solid #e3e3e3;
 }
@@ -61,8 +51,9 @@ input[type=submit]{
     color: #fff;
 }
 input[type=submit]:hover, input[type=submit]:active{
-    color: #000;
+    background-color: #000;
     cursor: pointer;
+    border: 1px solid #000;
 }
 .hide_block{
     display: none!important;
@@ -79,47 +70,57 @@ input[type=submit]:hover, input[type=submit]:active{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows:max-content;
-    column-gap: 2rem;
-    row-gap: 2rem;
+    column-gap: 4vh;
+    row-gap: 4vh;
 }
 .grid-3colums-in-row{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows:max-content;
-    column-gap: 2rem;
-    row-gap: 2em;
+    column-gap: 4vh;
+    row-gap: 4vh;
+}
+.bunner, .header, .what-we-do,.service, .about, .portfolio, .team, .pricing, .testimonial, .footer-contac-us,.footer-logo-social,.copyright{
+    grid-column: 2/3;
+}
+.green_txt{
+    color: #1abc9c;
+}
+.green_btn{
+    border: 1px solid #1abc9c;
+    background-color: #1abc9c;
+    color: #fff;
 }
 
 /* --- BUNNER --- */
 .bunner-wrapper{
     grid-column: 1 / 4;
     background-image: url(images/header-wool.jpg);
-    min-height: 450px;
+    min-height: 50vh;
     background-position: center;
     background-size: cover;
 }
 .bunner {
-    grid-column: 2/3;
-    align-self: center;
+    align-self:center;
     justify-content: center;
     text-align: center;
-    padding: 1rem;
+    padding: 1vh;
     color: white;  
 }
-.bunner-slogan{
-    font-size: 3.5rem;
-    line-height: 4.2rem;
-    padding: 1rem 0;
-}
+
 .bunner-discription{
     font-size: 1.5rem;
     line-height: 4.2rem;
-    padding: 1rem 0;
+    padding: 1vh 0;
+}
+form.subscribe-form{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
 }
 .subscribe_info {
-    line-height: 27px;
+    line-height: 1.2rem;
     width: 50%;
-    margin: 50px auto 10px;
+    margin: 5vh auto 1vh;
 }
 
 
@@ -130,20 +131,20 @@ input[type=submit]:hover, input[type=submit]:active{
     grid-column: 1 / 4;
 }
 .header {
-    grid-column: 2/3;
     display: grid;
     grid-template-columns: 0.5fr 6fr 1fr;
     align-self: center;
     justify-content: center;
     color: #a69999;
-    margin: 15px 0;
+    margin: 1vh 0;
 }
 .logo, .menu, .social-links{
     align-self: center;
     justify-content: center;
 }
 .logo img, .menu{
-    padding-right: 15px;
+    display: block;
+    margin: auto;
 }
 .menu ul{
     display: grid;
@@ -153,42 +154,42 @@ input[type=submit]:hover, input[type=submit]:active{
     padding: 0;
     text-align: center;
 }
+.menu ul li{
+    padding:0 1vh ;
+}
 .menu a{
-    color: #939598; 
+    color: #4c4c4c; 
 }
 .menu a:hover, .menu a:active{
     color: #1abc9c;
 }
-.social-links{
+.social-links, .footer-social-links{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     border-left: 1px solid #f3f3f3;
     border-right: 1px solid #f3f3f3;
+    align-self: center;
 }
-.social-links img{
+.social-links img, .footer-social-links img{
     display: block;
-    margin: 0px 10px;
+    margin: 0 auto;
     height: 1rem;
 }
+
 
 /* ---CONTENT --- */
 .content-wrapper {
     grid-column: 1 / 4;
-    padding: 3rem 0;
-    align-self: center;
 }
-.wrapper{
-    padding: 3rem 0;
+.wrapper{   
+padding: 5vh 0;
 }
 .wrapper:nth-child(even){
     background-color: #f7f7f7;
 }
-.what-we-do,.service, .about, .portfolio, .team, .pricing, .testimonial{
-    grid-column: 2/3;
-    text-align: center;
-}
+
 .what-we-do-dicription{
-    padding: 2rem 0;
+    text-align: center;
 }
 .what-we-do-dicription img{
     max-width: 3rem;
@@ -198,8 +199,9 @@ input[type=submit]:hover, input[type=submit]:active{
 }
 .block-service{
     border: 1px solid #a69999;
-    padding: 1rem;
+    padding: 1vh;
     background-color: #ffffff;
+    text-align: center;
 }
 .block-service ul{
     list-style: none;
@@ -209,7 +211,7 @@ input[type=submit]:hover, input[type=submit]:active{
 .block-service ul li{
     box-shadow: 1px 1.732px 1.5px rgba(0,0,0,0.1);
     margin-bottom: 5px;
-    padding: 0.5rem;
+    padding: 0.5vh;
     color: #000000;
 }
 .block-service ul li:hover{
@@ -217,30 +219,31 @@ input[type=submit]:hover, input[type=submit]:active{
     background-color: #f1f1f1;
 }
 .block-service img{
-    max-height: 150px;
+    max-height: 15vh;
     max-width: 100%;
 }
 .about-2colums{
     display: grid;
     grid-template-columns: 6fr 4fr;
     grid-template-rows:max-content;
-    column-gap: 2rem;
-    row-gap: 2rem;
+    column-gap: 2vh;
+    row-gap: 2vh;
 }
 .video iframe{
     width:100%;
-    min-height:300px;
+    min-height:50vh;
 }
 .tabs {
     list-style: none;
     margin: 0;
     padding: 0;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    column-gap: 3vh;
 }
 .tabs li{
-    display: inline-block;
     background-color:#1abc9c;
-    margin: 0.5rem;
-    padding: 0.5rem 1rem;
+    padding: 1vh 2vh;
     color: #fff;
 }
 .tabs li.active, .tabs li:hover{
@@ -269,30 +272,34 @@ input[type=submit]:hover, input[type=submit]:active{
     background: #0000005c;
     color: #fff;
     position: relative;
-    padding: 1rem;
+    padding: 1vh;
 }
 .portfolio-gallerys figure:hover figcaption{
     display: block;
 }
 .portfolio-gallerys figure:hover img{
-  margin-top: -3rem;
-  width: 110%;
+    width: 120%;
+}
+.team{
+    text-align: center;
 }
 .team-member{
     box-shadow: 3px 0px 10px 3px rgba(0,0,0,0.3);
-    padding: 1rem;
+    padding: 1vh;
 }
 .team-member img{
     background-color: #f1f1f1;
-    max-width: 100%;
-    
+    max-width: 100%;  
 }
 .team-member p{
     color: #4c4c4c;
 }
+.pricing{
+    text-align: center;
+}
 .price-card{
     box-shadow: 3px 0px 10px 3px rgba(0,0,0,0.3);
-    padding: 1rem; 
+    padding: 1vh; 
     background-color: #fff;
 }
 .round-foto img{
@@ -306,8 +313,8 @@ input[type=submit]:hover, input[type=submit]:active{
 .price-card .price{
     color: #fff;
     background-color: #1abc9c;
-    padding: 1rem;
-    margin: 1rem 0;
+    padding: 1vh;
+    margin: 1vh 0;
 }
 .price-card:hover{
     background-color: #1abc9c;
@@ -345,18 +352,17 @@ input[type=submit]:hover, input[type=submit]:active{
 }
 .footer-contac-us{
     background-color: #f1f1ef;
-    grid-column: 2/3;
     display: grid;
     grid-template-columns: repeat(3,1fr); 
     align-items: center;
     text-align: center; 
-    padding: 1rem 0;
+    padding: 1vh 0;
 }
 .phone i, .work-time i, .mail i{
     font-size: 3rem;
 }
 .phone p, .work-time p, .mail p{
-    padding: 0.5rem;
+    padding: 1vh;
     font-weight: bold;
 }
 .work-time{
@@ -368,25 +374,16 @@ input[type=submit]:hover, input[type=submit]:active{
     color:#a69999;
 }
 .copyright{
-    grid-column: 2/3;
     align-items: center;
     text-align: center;
-    padding: 50px 0 10px;
+    padding: 10vh 0 5px;
 }
 .footer-logo-social-wrapper{
     background-color: #000;
 }
 .footer-logo-social{
-    grid-column: 2/3;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-self: center;
-    padding: 2rem 0;
-}
-.footer-social-links{
-    text-align: right;
-}
-.footer-social-links a img{
-    padding-left: 1rem;
-    height: 1.5rem;
+    padding: 2vh 0;
 }
