@@ -19,7 +19,7 @@
         background: #f7f7f7;
     }
     .tabs {
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: 1fr;
         row-gap: 2vh;
     }
 }

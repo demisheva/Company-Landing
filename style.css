@@ -55,11 +55,11 @@ input[type=submit]:hover, input[type=submit]:active{
     cursor: pointer;
     border: 1px solid #000;
 }
-.hide_block{
+.hide-block{
     display: none!important;
 }
 .show-block{
-    display: block!important;
+    display: inherit!important;
 }
 .grid-container {
     display: grid;
@@ -233,6 +233,7 @@ padding: 5vh 0;
     width:100%;
     min-height:50vh;
 }
+
 .tabs {
     list-style: none;
     margin: 0;
@@ -254,9 +255,12 @@ padding: 5vh 0;
     margin-bottom: 3em;
 }
 .portfolio-gallerys{
-    display: grid;
+    display: none;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 45vh);
+}
+.show-tab{
+    display: grid;
 }
 .portfolio-gallerys figure{
     overflow: hidden;

@@ -37,10 +37,13 @@
     }
     .portfolio-gallerys {
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 20vh);
+        grid-template-rows: repeat(4, 20vh);
     }
     .portfolio-gallerys figure img {
         min-height: 20vh;
+    }
+    .footer-contac-us {
+        grid-template-columns:1fr;
     }
     .footer-logo-social{
         padding: 2vh;
