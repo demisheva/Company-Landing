@@ -1,9 +1,13 @@
 let tabsGallery = document.querySelectorAll('.tabs li');
 let galleryFigure = document.querySelectorAll('.show-tab figure');
+let testimonials = document.querySelectorAll('.testimonial');
 const nextSlide = document.querySelector('.slider-control-right');
 const prevSlide = document.querySelector('.slider-control-left');
 const closeSlideBtn = document.querySelector('.slider-close');
 const bigSliderImg = document.getElementById('big-img');
+const nextTestimonial = document.querySelector('.carusel-control-right');
+const prevTestimonial = document.querySelector('.carusel-control-left');
+
 
 clickOnImgShowSlider();
 
@@ -11,7 +15,6 @@ nextSlide.addEventListener("click", showNextPrevSlide);
 document.querySelector('body').addEventListener('keyup', event => {
     if (event.keyCode == 39) { showNextPrevSlide(event) }
 });
-
 
 prevSlide.addEventListener("click", showNextPrevSlide);
 document.querySelector('body').addEventListener('keyup', event => {
@@ -52,34 +55,53 @@ function showNextPrevSlide(event) {
     for (let index = 0; index < galleryFigure.length; index++) {
         if (galleryFigure[index].classList.contains("active-img")) {
             if (event.srcElement.className == "fa fa-angle-right" || event.srcElement.className == "slider-control slider-control-right" || event.keyCode == 39) {
-                showRightSlide(index);
+                showRightItem(index, galleryFigure, "active-img");
             } else if (event.srcElement.className == "fa fa-angle-left" || event.srcElement.className == "slider-control slider-control-left" || event.keyCode == 37) {
-                showLeftSlide(index);
+                showLeftSlide(index, galleryFigure, "active-img");
             }
             break;
         }
     }
 }
 
-function showRightSlide(index) {
-    if (galleryFigure[index + 1] == galleryFigure[galleryFigure.length]) {
-        galleryFigure[0].classList.add("active-img");
-        bigSliderImg.innerHTML = galleryFigure[0].innerHTML;
+function showRightItem(index, list, className) {
+    if (list[index + 1] == list[list.length]) {
+        list[0].classList.add(className);
+        bigSliderImg.innerHTML = list[0].innerHTML;
     } else {
-        galleryFigure[index + 1].classList.add("active-img");
-        bigSliderImg.innerHTML = galleryFigure[index + 1].innerHTML;
+        list[index + 1].classList.add(className);
+        bigSliderImg.innerHTML = list[index + 1].innerHTML;
     }
-    galleryFigure[index].classList.remove("active-img");
+    list[index].classList.remove(className);
 }
 
-function showLeftSlide(index) {
+function showLeftSlide(index, list, className) {
     if (index - 1 == -1) {
-        galleryFigure[galleryFigure.length - 1].classList.add("active-img");
-        bigSliderImg.innerHTML = galleryFigure[galleryFigure.length - 1].innerHTML;
+        list[list.length - 1].classList.add(className);
+        bigSliderImg.innerHTML = list[list.length - 1].innerHTML;
     } else {
-        galleryFigure[index - 1].classList.add("active-img");
-        bigSliderImg.innerHTML = galleryFigure[index - 1].innerHTML;
+        list[index - 1].classList.add(className);
+        bigSliderImg.innerHTML = list[index - 1].innerHTML;
     }
-    galleryFigure[index].classList.remove("active-img");
+    list[index].classList.remove(className);
 }
 
+
+nextTestimonial.addEventListener("click", showNextPrevNextTestimonial);
+
+prevTestimonial.addEventListener("click", showNextPrevNextTestimonial);
+
+
+
+function showNextPrevNextTestimonial() {
+    for (let index = 0; index < testimonials.length; index++) {
+        if (testimonials[index].classList.contains("show-testimonial")) {
+            if (event.srcElement.className == "fa fa-angle-right") {
+                showRightItem(index, testimonials, "show-testimonial");
+            } else if (event.srcElement.className == "fa fa-angle-left") {
+                showLeftSlide(index, testimonials, "show-testimonial");
+            }
+            break;
+        }
+    }
+}

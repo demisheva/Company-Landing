@@ -80,7 +80,7 @@ input[type=submit]:hover, input[type=submit]:active{
     column-gap: 4vh;
     row-gap: 4vh;
 }
-.bunner, .header, .what-we-do,.service, .about, .portfolio, .team, .pricing, .testimonial, .footer-contac-us,.footer-logo-social,.copyright{
+.bunner, .header, .what-we-do,.service, .about, .portfolio, .team, .pricing, .testimonials, .footer-contac-us,.footer-logo-social,.copyright{
     grid-column: 2/3;
 }
 .green_txt{
@@ -378,8 +378,6 @@ padding: 5vh 0;
 }
 
 
-
-
 .team{
     text-align: center;
 }
@@ -423,15 +421,39 @@ padding: 5vh 0;
     background-color: #fff;
     color: #1abc9c;
 }
+
 .testimonial-grid{
     display: grid;
-    grid-template-columns: 1fr 6fr;
+    grid-template-columns: 0.3fr 6fr 0.3fr;
+}
+.carusel-control-left,
+.carusel-control-right{
+    font-size: 2rem;
+    display: block;
+    margin: auto;
+    justify-content: center;
+}
+.carusel-control{
+    color: #1abc9c;
+    cursor: pointer;
+}
+.carusel-control i:hover,
+.carusel-control i:focus{
+    color: #4c4c4c;
+}
+
+.testimonial{
+    display: none;
     column-gap: 1rem;
     align-self: center;
     margin: 3vh 0;
     padding: 3vh;
     background: #f7f7f7;
     box-shadow: 3px 3px 8px #9E9E9E;
+}
+.show-testimonial{
+    display: grid;
+    grid-template-columns: 1fr 6fr;
 }
 .foto img{
     max-width: 90%;
@@ -445,6 +467,11 @@ padding: 5vh 0;
     font-size: 1.2rem;
     font-weight: bold;
 }
+
+
+
+
+
 
 /* --- FOOTER--- */
 .footer{
