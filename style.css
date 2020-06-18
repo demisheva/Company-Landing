@@ -272,7 +272,7 @@ padding: 5vh 0;
     min-height: 45vh;
     object-fit: cover;
     display: block;
-    transition: 500ms;
+    /* transition: 500ms; */
 }
 .portfolio-gallerys figure figcaption{
     background: #0000005c;
@@ -287,7 +287,7 @@ padding: 5vh 0;
     display: block;
 }
 .portfolio-gallerys figure:hover img{
-    width: 120%;
+    /* width: 120%; */
     margin-top: -3rem;
 }
 
@@ -328,33 +328,50 @@ padding: 5vh 0;
     padding: 1rem;
     text-align: center;
 }
-.slider-control,
 .slider-close {
     color: #1abc9c;
     cursor: pointer;
     font-size: 2rem;
     position: absolute;
+    z-index: 9999999;
+    top: 2vh;
+    right: 4vh;
+}
+.slider-control{
+    color: #1abc9c;
+    cursor: pointer;
+    font-size: 2rem;
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+.slider-control i{
+    position: absolute;
+    top: 50%;
 }
 
-.slider-control:hover,
-.slider-control:focus,
+.slider-control i:hover,
+.slider-control i:focus,
 .slider-close:hover,
 .slider-close:focus {
     color: #fff;
     text-decoration: none;
     outline: 0;
     opacity: .9;
-  }
-  .slider-close {
-    top: 3vh;
-    right: 3vh;
-  }
-  .slider-control-left {
-    left: 3vh;
-  }
-  .slider-control-right {
-    right: 3vh;
-  }
+}
+.slider-control-left{
+    left: 0;
+}
+.slider-control-left i{
+    left: 2vh;
+}
+.slider-control-right{
+    right: 0;
+}
+.slider-control-right i{
+    right: 2vh;
+}
 
 
 
