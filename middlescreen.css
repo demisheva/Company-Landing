@@ -42,6 +42,11 @@
     .portfolio-gallerys figure img {
         min-height: 20vh;
     }
+    #big-img img {
+        max-height: 90vh;
+        height: auto;
+    }
+
     .footer-contac-us {
         grid-template-columns:1fr;
     }
