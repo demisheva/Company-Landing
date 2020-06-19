@@ -57,7 +57,7 @@ function showNextPrevSlide(event) {
             if (event.srcElement.className == "fa fa-angle-right" || event.srcElement.className == "slider-control slider-control-right" || event.keyCode == 39) {
                 showRightItem(index, galleryFigure, "active-img");
             } else if (event.srcElement.className == "fa fa-angle-left" || event.srcElement.className == "slider-control slider-control-left" || event.keyCode == 37) {
-                showLeftSlide(index, galleryFigure, "active-img");
+                showLeftItem(index, galleryFigure, "active-img");
             }
             break;
         }
@@ -75,7 +75,7 @@ function showRightItem(index, list, className) {
     list[index].classList.remove(className);
 }
 
-function showLeftSlide(index, list, className) {
+function showLeftItem(index, list, className) {
     if (index - 1 == -1) {
         list[list.length - 1].classList.add(className);
         bigSliderImg.innerHTML = list[list.length - 1].innerHTML;
@@ -91,16 +91,25 @@ nextTestimonial.addEventListener("click", showNextPrevNextTestimonial);
 
 prevTestimonial.addEventListener("click", showNextPrevNextTestimonial);
 
-
-
 function showNextPrevNextTestimonial() {
     for (let index = 0; index < testimonials.length; index++) {
         if (testimonials[index].classList.contains("show-testimonial")) {
             if (event.srcElement.className == "fa fa-angle-right") {
                 showRightItem(index, testimonials, "show-testimonial");
             } else if (event.srcElement.className == "fa fa-angle-left") {
-                showLeftSlide(index, testimonials, "show-testimonial");
+                showLeftItem(index, testimonials, "show-testimonial");
             }
+            break;
+        }
+    }
+}
+
+setInterval(caruselTestimonial, 5000);
+
+function caruselTestimonial() {
+    for (let index = 0; index < testimonials.length; index++) {
+        if (testimonials[index].classList.contains("show-testimonial")) {
+            showRightItem(index, testimonials, "show-testimonial");
             break;
         }
     }
