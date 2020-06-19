@@ -55,35 +55,35 @@ function showNextPrevSlide(event) {
     for (let index = 0; index < galleryFigure.length; index++) {
         if (galleryFigure[index].classList.contains("active-img")) {
             if (event.srcElement.className == "fa fa-angle-right" || event.srcElement.className == "slider-control slider-control-right" || event.keyCode == 39) {
-                showRightItem(index, galleryFigure, "active-img");
+                showRightImg(index);
             } else if (event.srcElement.className == "fa fa-angle-left" || event.srcElement.className == "slider-control slider-control-left" || event.keyCode == 37) {
-                showLeftItem(index, galleryFigure, "active-img");
+                showLeftImg(index);
             }
             break;
         }
     }
 }
 
-function showRightItem(index, list, className) {
-    if (list[index + 1] == list[list.length]) {
-        list[0].classList.add(className);
-        bigSliderImg.innerHTML = list[0].innerHTML;
+function showRightImg(index) {
+    if (galleryFigure[index + 1] == galleryFigure[galleryFigure.length]) {
+        galleryFigure[0].classList.add("active-img");
+        bigSliderImg.innerHTML = galleryFigure[0].innerHTML;
     } else {
-        list[index + 1].classList.add(className);
-        bigSliderImg.innerHTML = list[index + 1].innerHTML;
+        galleryFigure[index + 1].classList.add("active-img");
+        bigSliderImg.innerHTML = galleryFigure[index + 1].innerHTML;
     }
-    list[index].classList.remove(className);
+    galleryFigure[index].classList.remove("active-img");
 }
 
-function showLeftItem(index, list, className) {
+function showLeftImg(index) {
     if (index - 1 == -1) {
-        list[list.length - 1].classList.add(className);
-        bigSliderImg.innerHTML = list[list.length - 1].innerHTML;
+        galleryFigure[galleryFigure.length - 1].classList.add("active-img");
+        bigSliderImg.innerHTML = galleryFigure[galleryFigure.length - 1].innerHTML;
     } else {
-        list[index - 1].classList.add(className);
-        bigSliderImg.innerHTML = list[index - 1].innerHTML;
+        galleryFigure[index - 1].classList.add("active-img");
+        bigSliderImg.innerHTML = galleryFigure[index - 1].innerHTML;
     }
-    list[index].classList.remove(className);
+    galleryFigure[index].classList.remove("active-img");
 }
 
 
@@ -95,13 +95,34 @@ function showNextPrevNextTestimonial() {
     for (let index = 0; index < testimonials.length; index++) {
         if (testimonials[index].classList.contains("show-testimonial")) {
             if (event.srcElement.className == "fa fa-angle-right") {
-                showRightItem(index, testimonials, "show-testimonial");
+                showRightTestimonial(index);
             } else if (event.srcElement.className == "fa fa-angle-left") {
-                showLeftItem(index, testimonials, "show-testimonial");
+                showLeftTestimonial(index);
             }
             break;
         }
     }
+}
+function showRightTestimonial(index) {
+    if (testimonials[index + 1] == testimonials[testimonials.length]) {
+        testimonials[0].classList.add("show-testimonial");
+        testimonials.innerHTML = testimonials[0].innerHTML;
+    } else {
+        testimonials[index + 1].classList.add("show-testimonial");
+        testimonials.innerHTML = testimonials[index + 1].innerHTML;
+    }
+    testimonials[index].classList.remove("show-testimonial");
+}
+
+function showLeftTestimonial(index) {
+    if (index - 1 == -1) {
+        testimonials[testimonials.length - 1].classList.add("show-testimonial");
+        testimonials.innerHTML = testimonials[testimonials.length - 1].innerHTML;
+    } else {
+        testimonials[index - 1].classList.add("show-testimonial");
+        testimonials.innerHTML = testimonials[index - 1].innerHTML;
+    }
+    testimonials[index].classList.remove("show-testimonial");
 }
 
 setInterval(caruselTestimonial, 5000);
@@ -109,7 +130,7 @@ setInterval(caruselTestimonial, 5000);
 function caruselTestimonial() {
     for (let index = 0; index < testimonials.length; index++) {
         if (testimonials[index].classList.contains("show-testimonial")) {
-            showRightItem(index, testimonials, "show-testimonial");
+            showRightTestimonial(index);
             break;
         }
     }
